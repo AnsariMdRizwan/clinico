@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express")
 const mongoose = require("mongoose")
 const cookieparser = require("cookie-parser")
@@ -9,7 +10,7 @@ const userRouter = require('./routes/user/user-route.js')
 
 const app = express()
 
-const CLIENT_URL = process.env.CLIENT_URL
+const CLIENT_URL = "https://cliniico.netlify.app"
 app.use(
     cors({
         origin: CLIENT_URL,
